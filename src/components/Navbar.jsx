@@ -2,8 +2,8 @@
 
 import { MenuIcon, X } from 'lucide-react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import React, { useEffect, useRef, useState } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import React, { useRef, useState } from 'react'
 
 const navItems = [
     {
@@ -37,6 +37,7 @@ function Navbar() {
     }
 
     const rounter = useRouter()
+    const path = usePathname()
 
 
 
@@ -67,7 +68,7 @@ function Navbar() {
             <li key={idx} >
                 <Link 
                 href={item.link}
-                className={`px-3 py-1.5 text-sm text-yellow-800 duration-100 hover:border rounded-lg hover:border-yellow-600 active:shadow-lg `}
+                className={`${path === item.link ? "border border-yellow-600 px-3 py-1.5  text-yellow-800 duration-100 hover:border rounded-lg hover:border-yellow-600 active:shadow-lg text-2xl " : ""}px-3 text-lg py-1.5  text-yellow-800 duration-100 hover:border rounded-lg hover:border-yellow-600 active:shadow-lg `}
                 >{item.name}</Link>
             </li>
         ))}
@@ -91,7 +92,7 @@ function Navbar() {
                     <Link 
                     href={item.link}
                     onClick={handleMobileOpen}
-                    className="px-3 py-1.5 text-sm text-yellow-800 duration-100 hover:border rounded-lg hover:border-yellow-600 active:shadow-lg"
+                    className={`${path === item.link ? "border border-yellow-600 px-3 py-1.5  text-yellow-800 duration-100 hover:border rounded-lg hover:border-yellow-600 active:shadow-lg text-2xl " : ""}px-3 text-lg py-1.5 text-yellow-800 duration-100 hover:border rounded-lg hover:border-yellow-600 active:shadow-lg `}
                     >{item.name}</Link>
                 </li>
             ))}
