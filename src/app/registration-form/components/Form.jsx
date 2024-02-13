@@ -5,7 +5,9 @@ import FormComponent from './FormComponent';
 function Form() {
   return (
     <div className='flex flex-col gap-2 bg-white rounded-lg shadow-md w-[90vw] md:w-[500px] p-4'>
-      <h1 className='text-center text-orange-600 text-2xl underline'>REGISTER FORM</h1>
+      <div className=' flex items-center justify-center rounded-full h-[40px] w-[40px] bg-yellow-500 self-center'>
+        <p className=' text-center text-white'>R</p>
+      </div>
       <FormComponent />
     </div>
   );

@@ -55,12 +55,12 @@ function FormComponent() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className='flex flex-col gap-9'>
+      <form onSubmit={handleSubmit} className='flex flex-col gap-9 py-2'>
         <label htmlFor='username' className='flex flex-col gap-2'>
           <span className='text-yellow-800 text-2xl'>Username</span>
           <input
             type='text'
-            className='shadow-md rounded-md p-3'
+            className='shadow-md ring-1 ring-yellow-100 outline-none rounded-md p-3'
             placeholder='Username here ...'
             name='username'
             id='username'
@@ -74,7 +74,7 @@ function FormComponent() {
           <input
             type='email'
             placeholder='Email here ...'
-            className='shadow-md rounded-md p-3'
+            className='shadow-md rounded-md p-3 ring-1 ring-yellow-100 outline-none'
             name='email'
             id='email'
             value={formData.email}
@@ -87,7 +87,7 @@ function FormComponent() {
           <input
             type='password'
             placeholder='Password here ...'
-            className='shadow-md rounded-md p-3'
+            className='shadow-md rounded-md p-3 ring-1 ring-yellow-100 outline-none'
             name='password'
             id='password'
             value={formData.password}
@@ -95,7 +95,7 @@ function FormComponent() {
           />
           {errors.password && <p className='text-red-500'>{errors.password}</p>}
         </label>
-        <button type='submit' className='bg-orange-500 text-white rounded-md p-2 w-1/2 self-center' disabled={loading}>
+        <button type='submit' className='bg-yellow-500 text-white rounded-md p-2 w-1/2 self-center' disabled={loading}>
           {loading ? "Congrats!" : 'Register'}
         </button>
         {successMessage && <p className='text-green-500 text-center ring-1 p-2 ring-green-300'>{successMessage}</p>}
