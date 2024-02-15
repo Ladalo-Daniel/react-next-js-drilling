@@ -12,8 +12,13 @@ const data = [
 ]
 
 function TodoAppComponent() {
-    
-    const storedTasks = JSON.parse(localStorage.getItem("tasks")) || []
+
+    // Check if localStorage is available
+  const isLocalStorageAvailable = typeof localStorage === 'undefined';
+
+  // Load tasks from local storage or use an empty array
+  const storedTasks = isLocalStorageAvailable
+    ? [] :  JSON.parse(localStorage.getItem('tasks')) || []
 
     const [tasks, setTasks] = useState(storedTasks)
     const [newTask, setNewTask] = useState("")
