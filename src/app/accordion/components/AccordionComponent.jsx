@@ -24,7 +24,7 @@ function AccordionComponent({ sections }) {
                         <ArrowDown size={16} className=' text-yellow-900'/>
                     </div>
                     <div 
-                    className={` max-h-0 overflow-hidden transition-all duration-1000 ${idx === activeSection ? " max-h-[1000px] transition-all duration-1000 " : ""}`}
+                    className={` max-h-0 overflow-hidden transition-all duration-1000 ${idx === activeSection ? " max-h-[1000px] transition-all duration-1000  " : ""}`}
                     >
                         {section.content}
                     </div>
