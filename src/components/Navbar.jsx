@@ -42,7 +42,7 @@ function Navbar() {
 
 
   return (
-    <nav className=' flex flex-row items-center justify-between bg-slate-50 w-full h-[50px] sticky top-0 shadow-2xl'>
+    <nav className=' flex flex-row items-center justify-between z-50 bg-slate-50 w-full h-[50px] sticky top-0 shadow-2xl'>
         {/* IMAGELOGO_HERE */}
         <div className=' flex flex-row gap-2 items-center px-5'>
             <div className=' md:hidden' onClick={handleMobileOpen}>
@@ -86,7 +86,12 @@ function Navbar() {
      { 
        mobileNav &&
         (    
-            <ul ref={navRef} className={ ` ${mobileNav && " ease-linear transition-all  w-[50vw] duration-1000  shadow-2xl"}  flex flex-col md:hidden  gap-3 top-[50px] absolute bg-slate-50 h-[100vh] px-3 py-7  duration-1000  `}>
+            <ul ref={navRef} className={ ` ${mobileNav ? " transition-all  w-[50vw] duration-1000  shadow-2xl" : ""}  flex flex-col md:hidden transition-all   gap-3 top-[0px] absolute bg-slate-50 h-[100vh] px-3 py-7  duration-1000  `}>
+            <X  
+            onClick={mobileNav && handleMobileOpen}
+            size={40}
+            className=' absolute right-2 top-1 ring-1 ring-slate-100 p-2 rounded-md text-yellow-800'/>
+
             {navItems.map((item, idx) => (
                 <li key={idx} >
                     <Link 

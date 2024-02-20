@@ -18,13 +18,13 @@ function AccordionComponent({ sections }) {
                 <div key={idx} className=' flex gap-2 flex-col overflow-hidden'>
                     <div 
                     onClick={() => toggleActiveSection(idx)}
-                    className={` bg-slate-100 p-2 transition-all ease-linear cursor-pointer flex flex-row justify-between items-center`}
+                    className={` bg-slate-100 p-2 transition-all duration-1000 ease-linear cursor-pointer flex flex-row justify-between items-center`}
                     >
                         {section.title}
                         <ArrowDown size={16} className=' text-yellow-900'/>
                     </div>
                     <div 
-                    className={` max-h-0 overflow-hidden transition-all ease-linear ${idx === activeSection ? " max-h-[1000px] transition-all " : ""}`}
+                    className={` max-h-0 overflow-hidden transition-all duration-1000 ${idx === activeSection ? " max-h-[1000px] transition-all duration-1000 " : ""}`}
                     >
                         {section.content}
                     </div>
