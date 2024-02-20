@@ -1,0 +1,14 @@
+4. Accordion Component
+Design an accordion component that allows users to expand and collapse sections to view content.
+
+Skills tested: React component composition, state management
+Difficulty: Easy – Medium
+Tasks:
+
+Implement the accordion component UI.
+Ensure only one section can be expanded at a time.
+Add animations for smooth transitions.
+Hints:
+
+Use React state to track the active section.
+CSS transitions or animations can be used for visual effects.

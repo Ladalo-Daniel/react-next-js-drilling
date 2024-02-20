@@ -1,15 +1,8 @@
 "use client"
 
-import {CheckSquare, Edit, Trash } from 'lucide-react'
+import { Edit, Trash } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
 
-const data = [
-    {id:1, todo: "Fasting and Praying Today"},
-    {id:2, todo: "Reading and Studing Today"},
-    {id:3, todo: "Going to church and gamiing Today"},
-    {id:4, todo: "Going for celebration today"},
-    {id:5, todo: "We are going for fellowship"},
-]
 
 function TodoAppComponent() {
 
@@ -25,11 +18,6 @@ function TodoAppComponent() {
     const [error, setError] = useState(false)
     const [completedTask, setCompletedTask] = useState(false)
     
-    //Effect to get tasks from localstorage on component mount
-    // useEffect(() => {
-    //     const storedTasks = JSON.parse(localStorage.getItem("tasks")) || []
-    //     setTasks(storedTasks)
-    // }, [])
 
     //Effect to save tasks to localstorage whenever task changes
     useEffect(() => {
@@ -87,13 +75,13 @@ function TodoAppComponent() {
                 type="text" 
                 value={newTask}
                 onChange={handleInputChange}
-                className=' shadow-md outline-none ring-1 ring-yellow-200 md:w-[270px] p-2 rounded-md'
+                className=' shadow-md outline-none ring-1 ring-yellow-200 w-[160px] md:w-[270px]  p-2 rounded-md'
                 placeholder='Start typing...' />
-                <button type='submit' className=' bg-yellow-500 rounded-md p-1 text-white'>Add task</button>
+                <button type='submit' className=' bg-yellow-500 rounded-md p-1 text-white text-sm'>Add task</button>
             </form>
         </div>
 
-        {error &&  <span className=' text-red-500'>Length of task must be greater than 4</span>}
+        {error &&  <span className=' text-red-500 text-sm'>Length of task must be more than 4 characters</span>}
 
 
         {/* RENDER_COMPONENT */}

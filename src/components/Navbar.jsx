@@ -42,7 +42,7 @@ function Navbar() {
 
 
   return (
-    <nav className=' flex flex-row items-center justify-between bg-slate-50 w-full h-[50px] sticky top-0'>
+    <nav className=' flex flex-row items-center justify-between bg-slate-50 w-full h-[50px] sticky top-0 shadow-2xl'>
         {/* IMAGELOGO_HERE */}
         <div className=' flex flex-row gap-2 items-center px-5'>
             <div className=' md:hidden' onClick={handleMobileOpen}>
@@ -63,7 +63,7 @@ function Navbar() {
 
         {/* DESKTOP_MENU */}
 
-      <ul className=' md:flex flex-row items-center gap-3 hidden '>
+      <ul className=' md:flex flex-row items-center gap-3 hidden shadow-2xl '>
         {navItems.map((item, idx) => (
             <li key={idx} >
                 <Link 
@@ -86,7 +86,7 @@ function Navbar() {
      { 
        mobileNav &&
         (    
-            <ul ref={navRef} className=' flex flex-col md:hidden  gap-3 top-[50px] absolute bg-slate-50 h-[100vh] w-[35vw] px-3 py-7 duration-1000  '>
+            <ul ref={navRef} className={ ` ${mobileNav && " ease-linear transition-all  w-[50vw] duration-1000  shadow-2xl"}  flex flex-col md:hidden  gap-3 top-[50px] absolute bg-slate-50 h-[100vh] px-3 py-7  duration-1000  `}>
             {navItems.map((item, idx) => (
                 <li key={idx} >
                     <Link 
