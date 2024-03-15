@@ -20,6 +20,9 @@ export default function Home() {
           <Link href="/registration-form" className=" rounded-md ring-yellow-400 ring-1 p-2 w-1/2 self-center hover:bg-yellow-300 text-yellow-900">
             Register Form
           </Link>
+          <Link href="/admin-dashboard-layout" className=" rounded-md ring-yellow-400 ring-1 p-2 w-1/2 self-center hover:bg-yellow-300 text-yellow-900">
+            Admin
+          </Link>
        </div>
     </main>
   );
