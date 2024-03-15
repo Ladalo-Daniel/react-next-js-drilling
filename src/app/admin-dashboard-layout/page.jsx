@@ -6,9 +6,9 @@ const AdminPage = () => {
 
 
   return (
-    <main className="flex blueGreen flex-col md:flex-row min-h-screen overflow-hidden max-w-7xl mx-auto">
-      <aside className="md:w-[18rem] bg-white shadow-lg relative md:h-screen max-lg:hidden h-auto w-full flex flex-row md:flex-col md:justify-normal gap-8 md:gap-4">
-          <div className="w-[10rem] bg-red-600 max-lg:hidden h-[100px] md:shadow-xl text-center md:w-[85%] md:h-[25%] border-0 flex gap-1 md:gap-2 flex-row md:flex-col justify-start md:justify-center md:mt-1 md:ml-2 items-center rounded-xl"
+    <main className="flex bg-yellow-600 flex-col md:flex-row min-h-screen overflow-hidden max-w-7xl mx-auto">
+      <aside className="md:max-w-[18rem] md:min-w-[18rem] bg-yellow-200 shadow-lg relative md:h-screen max-lg:hidden h-auto w-full flex flex-row md:flex-col md:justify-normal gap-8 md:gap-4">
+          <div className="w-[10rem] bg-yellow-600 max-lg:hidden h-[100px] md:shadow-xl text-center md:w-[85%] md:h-[25%] border-0 flex gap-1 md:gap-2 flex-row md:flex-col justify-start md:justify-center md:mt-1 md:ml-2 items-center rounded-xl"
           >
             <h1>Image</h1>
           </div>
