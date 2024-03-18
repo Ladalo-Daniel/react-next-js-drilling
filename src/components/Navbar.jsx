@@ -86,7 +86,7 @@ function Navbar() {
      { 
        mobileNav &&
         (    
-            <ul ref={navRef} className={ ` ${mobileNav ? " transition-all  w-[50vw] duration-1000  shadow-2xl" : ""}  flex flex-col md:hidden transition-all   gap-3 top-[0px] absolute bg-slate-50 h-[100vh] px-3 py-7  duration-1000  `}>
+            <ul ref={navRef} className={ ` ${mobileNav ? " transition-all transform  w-[50vw] duration-1000  shadow-2xl" : ""}  flex flex-col md:hidden transition-all   gap-3 top-[0px] absolute bg-slate-50 h-[100vh] px-3 py-7  duration-1000  `}>
             <X  
             onClick={mobileNav && handleMobileOpen}
             size={40}
